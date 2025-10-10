@@ -1,0 +1,478 @@
+/* Font Imports: Cinzel for Headings, Open Sans for Body */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Warna Dasar */
+.dark-section {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* --- JUDUL DAN SUB-JUDUL ELEGAN --- */
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    margin-bottom: 70px;
+    color: #222;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #CC0000;
+    margin: 15px auto 0;
+}
+
+.gold-title {
+    color: #FFD700;
+}
+
+.gold-title::after {
+    background: #FFD700;
+}
+
+/* --- HEADER & HERO SECTION --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px; /* Ruang untuk navbar fixed */
+    
+    /* Ganti 'bg-psht.webp' dengan nama file foto Anda */
+    background: url('bg-psht.webp') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); 
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* POSISI FIXED DAN TRANSPARAN DEFAULT */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1100px; 
+    margin: 0 auto;
+    padding: 20px; 
+    z-index: 1000; 
+    background-color: transparent; 
+    transition: background-color 0.4s ease, padding 0.4s ease; 
+}
+
+/* Tampilan Navbar Saat di-Scroll (Solid Color) */
+nav.scrolled {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    padding: 15px 20px;
+}
+/* Pastikan logo tetap terlihat saat di-scroll */
+nav.scrolled .logo-text {
+    color: #FFD700;
+}
+
+
+.logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #CC0000; 
+}
+
+.cta-nav-btn {
+    background-color: #CC0000;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500 !important;
+    transition: background-color 0.3s;
+}
+
+.cta-nav-btn:hover {
+    background-color: #990000;
+    color: #fff !important;
+}
+
+/* Konten Utama Hero */
+.hero-content {
+    padding-top: 100px;
+}
+
+.pre-title {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: #FFD700; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-style: normal; /* TEGAK/TIDAK MIRING */
+    font-weight: 300;
+}
+
+.main-cta-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #CC0000; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.main-cta-btn:hover {
+    background-color: #990000;
+    transform: translateY(-2px);
+}
+
+/* --- ABOUT SECTION --- */
+.about-flex {
+    display: flex;
+    text-align: left;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #CC0000;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #CC0000;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid #CC0000;
+    transition: color 0.3s;
+}
+.read-more-btn:hover {
+    color: #990000;
+    border-bottom-color: #990000;
+}
+
+
+/* --- PHILOSOPHY SECTION --- */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.philosophy-item {
+    background: #2b2b2b;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.philosophy-item:hover {
+    background-color: #3a3a3a;
+}
+
+.philosophy-item h3 {
+    font-family: 'Cinzel', serif;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.gold-icon {
+    color: #CC0000;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* --- TRAINING & CTA SECTION --- */
+.cta-training {
+    background-color: #e5e5e5;
+}
+
+.red-title::after {
+    background: #CC0000;
+}
+
+.training-details {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.info-card {
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px 30px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-left: 5px solid #CC0000;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.red-bg-btn {
+    background-color: #CC0000;
+}
+
+/* --- MAPS SECTION --- */
+.map-section {
+    padding-bottom: 70px;
+}
+
+.map-container {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map-container iframe {
+    width: 100% !important; 
+    height: 450px;
+    border-radius: 5px;
+    border: none !important; 
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    background-color: #fff;
+}
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    font-family: 'Cinzel', serif;
+    color: #CC0000;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    border-top: 3px solid #CC0000;
+}
+
+
+/* --- HAMBURGER MENU STYLES (DEFAULT HIDDEN) --- */
+.menu-toggle {
+    display: none; /* Sembunyikan di desktop */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    transition: all 0.3s ease;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700; /* Warna Emas */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animasi Hamburger (saat diklik) */
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+    /* Perubahan untuk tablet ke bawah */
+    .about-flex {
+        flex-direction: column;
+    }
+    .about-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    /* Navbar dan Menu Mobile diaktifkan di bawah 900px */
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        /* PENTING: Tampilan menu mobile tersembunyi */
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Jarak dari navbar */
+        left: 0;
+        background-color: #1a1a1a;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        border-top: 1px solid #333;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex; /* Tampilkan saat class 'active' ditambahkan oleh JS */
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #2b2b2b;
+    }
+    
+    .nav-links li a {
+        display: block;
+        padding: 15px 0;
+        color: #f0f0f0;
+    }
+    
+    .nav-links li a:hover {
+        background-color: #2b2b2b;
+    }
+    
+    .menu-toggle {
+        display: flex; /* Tampilkan Hamburger */
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Card Info menjadi blok penuh */
+    .info-card {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
